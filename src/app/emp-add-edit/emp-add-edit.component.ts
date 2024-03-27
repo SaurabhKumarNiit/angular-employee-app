@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
 import { EmployeeService } from '../services/employee.service';
@@ -28,13 +28,13 @@ export class EmpAddEditComponent implements OnInit {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      dob: '',
+      firstName: ['',Validators.required],
+      lastName: ['',Validators.required],
+      email: ['',Validators.required],
+      dob: ['',Validators.required],
       gender: '',
       education: '',
-      company: '',
+      company: ['',Validators.required],
       experience: '',
     });
   }
@@ -68,6 +68,8 @@ export class EmpAddEditComponent implements OnInit {
           },
         });
       }
+    }else{
+      this._coreService.openSnackBar('Please Check Required Fields !');
     }
   }
 }
