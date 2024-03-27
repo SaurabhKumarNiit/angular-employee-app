@@ -36,6 +36,7 @@ export class EmpAddEditComponent implements OnInit {
       education: '',
       company: ['',Validators.required],
       experience: '',
+      image:''
     });
   }
 
