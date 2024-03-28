@@ -2,7 +2,7 @@
   <span>Employee</span>
   <span ></span>
   <button mat-raised-button (click)="openAddEditEmpForm()">
-    ADD EMPLOYEE
+   <mat-icon>add_comment</mat-icon> ADD EMPLOYEE
   </button>
 </mat-toolbar>
 
@@ -10,7 +10,7 @@
 
 <div class="container-fluid p-4">
 
-  <mat-form-field class="w-100">
+  <mat-form-field class="w-100 d-none">
     <!-- <mat-label>Filter</mat-label> -->
     <input matInput (keyup)="applyFilter($event)" disabled="true"  #input>
   </mat-form-field>
