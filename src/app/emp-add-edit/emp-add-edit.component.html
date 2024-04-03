@@ -3,6 +3,38 @@
 </div>
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="pt-2">
+
+        <div class="d-flex justify-content-center">
+            <!-- Loader -->
+            <!-- Loader -->
+
+                  <label for="file"  class="image-container" >
+                    <div style="display: flex; justify-content: center;">                     
+                    <div style="position: relative;" *ngIf="loading" class="loader"></div>
+                    </div>
+                    <!-- <img [src]="urllink" id="photo" class="image" [class.fade-in]="imageLoaded"> -->
+                        <img *ngIf="urllink" [src]="urllink" id="photo" class="image" [class.fade-in]="imageLoaded">
+                        <img *ngIf="!urllink" src="https://static.vecteezy.com/system/resources/thumbnails/021/362/884/small/upload-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg" id="placeholder" class="placeholder-image" width="100px">
+
+                  </label>
+                  <span  *ngIf="urllink" (click)="removeImage()" class="remove-btn">&#10006;</span>
+
+                
+                  <input type="file" id="file" style="display: none;" (change)="selectFiles($event)">
+
+                
+              <!-- Cross icon to remove image -->
+            </div>
+    
+
+           <!-- <div  class="d-flex justify-content-center">
+            <label for="file" style="cursor: pointer;">
+              <img [src]="urllink" id="photo" style="height: 100px; width: 100px; border-radius: 50%;border: 1px solid#383737;">
+            </label>
+          
+            <input type="file" id="file" style="display: none;" (change)="selectFiles($event)">
+          </div> -->
+
         <div class="d-flex justify-content-between">
             <mat-form-field appearance="outline" >
                 <mat-label>First name</mat-label>

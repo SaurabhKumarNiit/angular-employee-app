@@ -1,0 +1,22 @@
+/* CSS for the File Upload Component */
+div.file-upload-container {
+    text-align: center;
+  }
+  
+  /* Style for the uploaded image */
+  .filepond--root {
+    display: inline-block; /* Ensures that FilePond component behaves like an inline element */
+  }
+  
+  .filepond--item {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Animation effect for the uploaded image */
+  .filepond--item:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  

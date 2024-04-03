@@ -95,7 +95,9 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "../node_modules/filepond/dist/filepond.min.css"
+
             ],
             "scripts": []
           }

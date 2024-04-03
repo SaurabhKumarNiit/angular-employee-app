@@ -1,0 +1,34 @@
+<div class="file-upload-container">
+  <file-pond
+  #myPond
+  [options]="pondOptions"
+  [files]="pondFiles"
+  (oninit)="pondHandleInit()"
+  (onaddfile)="pondHandleAddFile($event)"
+>
+</file-pond>
+  </div>
+
+  <!-- <div class="file-upload-container">
+    <file-pond 
+      [options]="pondOptions">
+    </file-pond> 
+
+    <img *ngIf="uploadImage" [src]="uploadImage" width="100px" alt="upload image">
+
+  </div>
+
+  <div>
+    <div>
+        <pintura-editor
+            src="my-image.jpeg"
+            [options]="editorOptions"
+            (process)="handleInlineProcess($event)"
+        >
+        </pintura-editor>
+    </div>
+
+    <img *ngIf="inlineResult" [src]="inlineResult" alt="" />
+</div> -->
+  
+  

@@ -22,11 +22,20 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { FilePondModule, registerPlugin } from 'ngx-filepond';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import * as FilePondPluginFileValidateType from "filepond-plugin-file-validate-type";
+registerPlugin(FilePondPluginFileValidateType);
+
+import { AngularPinturaModule } from '@pqina/angular-pintura';
+
+
 @NgModule({
-  declarations: [AppComponent, EmpAddEditComponent],
+  declarations: [AppComponent, EmpAddEditComponent, FileUploadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularPinturaModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -44,6 +53,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
+    FilePondModule
   ],
   providers: [],
   bootstrap: [AppComponent],

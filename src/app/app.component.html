@@ -6,7 +6,7 @@
   </button>
 </mat-toolbar>
 
-
+<app-file-upload></app-file-upload>
 
 <div class="container-fluid p-4">
 
@@ -23,6 +23,11 @@
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
                 <td mat-cell *matCellDef="let row = index"> {{row+1}}. </td>
+            </ng-container>
+
+            <ng-container matColumnDef="image">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Profile </th>
+                <td mat-cell *matCellDef="let row = index"> <img [src]="row.image" alt="" width="30px"> </td>
             </ng-container>
 
             <!-- Progress Column -->
